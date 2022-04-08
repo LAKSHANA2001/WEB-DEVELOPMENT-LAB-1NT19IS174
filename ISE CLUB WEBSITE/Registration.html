@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="registrationStyle.css">
+
+</head>
+
+<body>
+    <div class="main-block">
+        <form action="/">
+            <h1>REGISTRATION FORM</h1>
+            <p>Name: </p>
+            <input type="text" name="name" placeholder="Full name">
+            <div class="radio">
+                <p>Gender:</p>
+                <div class="row">
+                    <div class="column">
+                        Male
+                    </div>
+                    <input type="radio" value="male" name="gender" class="column">
+                </div>
+                <div class="row">
+                    <div class="column">
+                        Female
+                    </div>
+                    <input type="radio" value="female" name="gender" class="column">
+                </div>
+            </div>
+            <p>DOB:</p>
+            <input type="date ">
+            <p>Phone:</p>
+            <input type="email ">
+            <p>Designation:</p>
+            <input type="text " placeholder="Designation ">
+            <p>Blood Group:</p>
+            <select name="bloodGroup " id="bloodGroup ">
+                <option value="A+ ">A+</option>
+                <option value="A- ">A-</option>
+                <option value="B+ ">B+</option>
+                <option value="B- ">B-</option>
+                <option value="AB+ ">AB+</option>
+                <option value="AB- ">AB-</option>
+                <option value="O+ ">O+</option>
+                <option value="O- ">O-</option>
+            </select>
+
+            <p>Reason to join:</p>
+            <textarea name="reasonToJoin " id="text " cols="40 " rows="5 "></textarea>
+            <p>Refference:</p>
+            <input type="text " placeholder="Refference ">
+            <p>Address:</p>
+            <input type=" text " placeholder="Address ">
+            <p>Hobbies:</p>
+            <input type="text " placeholder="Hobbies ">
+            <p>Areas of interest:</p>
+            <input type="text " placeholder="Areas of interest "><br><br>
+            <button type="submit " id="submit">Submit</button>
+            <button type="reset ">Reset</button>
+        </form>
+    </div>
+</body>
+
+</html>
