@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n = prompt("Enter the size of the array")
+        var a = new Array(n)
+        for (i = 0; i < n; i++) {
+            a[i] = prompt("Enter the element " + (i + 1))
+        }
+        for (i = 0; i < n / 2; i++) {
+            temp = a[i]
+            a[i] = a[n - 1 - i]
+            a[n - 1 - i] = temp
+        }
+        document.write("Reversed array <br>" + a)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

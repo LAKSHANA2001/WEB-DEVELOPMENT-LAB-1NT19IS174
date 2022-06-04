@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n = prompt("Enter the size of the array")
+        var a = new Array(n)
+        for (i = 0; i < n; i++) {
+            a[i] = prompt("Enter the element " + (i + 1))
+        }
+        var size = prompt("Enter the size to split the array")
+        for (i = 0; i < n; i += size) {
+            document.write("[")
+            for (j = i; j < j + size; j++)
+                document.write(a[j] + ",")
+            document.write("]")
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

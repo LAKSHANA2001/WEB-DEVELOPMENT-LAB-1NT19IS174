@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var start = prompt("Enter the start range for leap year")
+        var end = prompt("Enter the end range for leap year")
+        document.write("Leap yeras between " + start + "-" + end + "<br>")
+        for (i = start; i < end; i++) {
+            if (leapyear(i) == 1)
+                document.write(i + "<br>")
+        }
+
+        function leapyear(year) {
+            if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+                return 1
+            else
+                return 0
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
