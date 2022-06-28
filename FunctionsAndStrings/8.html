@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var s = prompt("Enter a string")
+    var key = parseInt(prompt("Enter the key value"))
+    var result = ""
+    for (i = 0; i < s.length; i++) {
+        if (key + s[i].charCodeAt(0) <= 90)
+            result += String.fromCharCode(key + s[i].charCodeAt(0))
+        else
+            result += String.fromCharCode(parseInt((key + s[i].charCodeAt(0)) % 90) + 64)
+    }
+    document.write(result)
+</script>
+
+</html>

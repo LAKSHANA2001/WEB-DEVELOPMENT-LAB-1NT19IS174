@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var n = parseInt(prompt("Enter no. of elements"))
+    var a = new Array(n)
+    for (i = 0; i < n; i++)
+        a[i] = parseInt(prompt("Enter element " + (i + 1)))
+    var x = parseInt(prompt("Enter the key"))
+    pos = jumpSearch(a, x, n)
+    if (pos == -1)
+        document.write("Key is not found ")
+    else
+        document.write("Key is found at index " + pos)
+
+    function jumpSearch(a, x, n) {
+        var prev = 0
+        var step = Math.floor(Math.sqrt(n))
+        while (a[Math.min(step, n) - 1] < x) {
+            prev = step
+            step += step
+            if (prev >= n)
+                return -1
+        }
+        while (a[prev] < x) {
+            prev++
+            if (prev == Math.min(step, n))
+                return -1
+        }
+        if (a[prev] == x)
+            return prev
+        return -1
+    }
+</script>
+
+</html>

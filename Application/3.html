@@ -6,15 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        for (i = 100; i >= 0; i -= 3) {
-            document.write(i + " ");
-        }
-    </script>
 </head>
 
 <body>
 
 </body>
+<script>
+    var s = prompt("Enter a string")
+    var unique = ""
+    for (i = 0; i < s.length; i++) {
+        if (unique.indexOf(s[i]) == -1)
+            unique += s[i]
+    }
+    document.write("Unique string: " + unique)
+</script>
 
 </html>

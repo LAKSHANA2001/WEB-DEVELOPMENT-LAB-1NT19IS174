@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        for (i = 100; i >= 0; i -= 3) {
-            document.write(i + " ");
-        }
+        var kg = prompt("Enter a value in kg")
+        var lbs = kg * 2.2
+        if (lbs > 150)
+            document.write("Obese")
+        else if (lbs > 100 && lbs < 150)
+            document.write("You are ok")
+        else
+            document.write("underweight")
     </script>
 </head>
 

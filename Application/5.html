@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="enterString">Enter a string:</label><br><br>
+    <input type="text" id="stringText"><br><br>
+    <label for="">Select a string method</label>
+    <select name="string" id="stringSelect">
+        <option value="lower">toLowerCase()</option>
+        <option  value="upper">toUpperCase()</option>
+        <option  value="length">StringLength</option>
+        <option  value="slice">StringSlice</option>
+        <option value="concat">StringConcat</option>
+        <option value="trim">StringTrim</option>
+    </select><br>
+    <button onclick=stringSelector()>Click Me</button>
+    <p id="stringValue"></p>
+</body>
+<script>
+    function stringSelector() {
+        var select = document.querySelector("#stringSelect").value
+        var s = document.getElementById("stringValue")
+        var str = document.getElementById("stringText").value
+        if (select === "lower")
+            s.innerHTML = "String in lowerCase " + str.toLowerCase()
+        if (select === "upper")
+            s.innerHTML = "String in UpperCase " + str.toUpperCase()
+        if (select === "length")
+            s.innerHTML = "String length " + str.length
+        if (select === "slice") {
+            var l = prompt("Enter lower range")
+            var r = prompt("Enter upper range")
+            s.innerHTML = "String slice " + str.slice(l, r)
+        }
+        if (select === "concat") {
+            var ele = prompt("Enter another string")
+            s.innerHTML = "String concat " + str.concat(ele)
+        }
+
+        if (select === "trim")
+            s.innerHTML = "String trim " + str.trim()
+    }
+</script>
+
+</html>

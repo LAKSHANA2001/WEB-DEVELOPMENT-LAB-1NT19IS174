@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var n = parseInt(prompt("Enter no. of students"))
+    var a = new Array(n)
+
+    function average(a, n) {
+        var sum = 0,
+            avg = 0,
+            count = 0
+        for (i = 0; i < n; i++)
+            a[i] = parseInt(prompt("Enter marks " + (i + 1)))
+
+        for (i = 0; i < n; i++) {
+            sum += a[i]
+        }
+        avg = sum / n
+        for (i = 0; i < n; i++) {
+            if (a[i] > avg)
+                count++
+        }
+
+        document.write("% scored more than avg marks " + ((count * 100) / n))
+    }
+
+    const getFrequency = (array) => {
+        const map = {};
+        array.forEach(item => {
+            if (map[item]) {
+                map[item]++;
+            } else {
+                map[item] = 1;
+            }
+        });
+        return map;
+    };
+    average(a, n)
+    console.log(getFrequency(a))
+</script>
+
+</html>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var cow = parseInt(prompt("Enter no. of cows"))
+    var chickens = parseInt(prompt("Enter no. of chickens"))
+    var num1 = cow
+    var num2 = chickens
+    var count1 = 0
+    var count2 = 0
+    while (num1 > 1) {
+        num1 = num1 / 10
+        count1 += 1
+    }
+    while (num2 > 1) {
+        num2 = num2 / 10
+        count2 += 1
+    }
+    for (i = 0; i < 3 - count1; i++)
+        document.write("0")
+    document.write(cow + " cows" + "<br>")
+    for (i = 0; i < 3 - count2; i++)
+        document.write("0")
+    document.write(chickens + " chickens")
+</script>
+
+</html>

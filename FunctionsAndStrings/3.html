@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sum = 0
+        var n = prompt("Enter no. of elements")
+        var a = new Array(n)
+        for (var i = 0; i < n; i++)
+            a[i] = prompt("Enter element " + (i + 1))
+        var map1 = a.map(x => x * 10);
+        for (var n of map1)
+            sum += n
+        document.write("Sum of the elements after multiplying each number by 10 :" + sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

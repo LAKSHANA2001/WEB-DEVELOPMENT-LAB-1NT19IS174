@@ -6,15 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        for (i = 100; i >= 0; i -= 3) {
-            document.write(i + " ");
-        }
-    </script>
 </head>
 
 <body>
 
 </body>
+<script>
+    var name = prompt("Enter name")
+    var li = name.split(" ")
+    i = 0
+    s = ""
+    while (i < li.length - 1) {
+        s += li[i][0] + "."
+        i += 1
+    }
+    document.write(s + li[li.length - 1])
+</script>
 
 </html>

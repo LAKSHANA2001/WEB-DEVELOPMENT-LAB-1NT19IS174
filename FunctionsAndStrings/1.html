@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    average = () => {
+        var sum = 0;
+        var avg = 0;
+        var n = prompt("Enter no. of elements")
+        var a = new Array(n)
+        for (var i = 0; i < n; i++)
+            a[i] = prompt("Enter element " + (i + 1))
+        for (var n of a)
+            sum = sum + parseInt(n)
+        avg = sum / n;
+        return avg
+    }
+    document.write("Average of elements is " + average())
+</script>
+
+<body>
+
+</body>
+
+</html>
